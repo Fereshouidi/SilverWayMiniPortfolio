@@ -11,6 +11,25 @@ import { socialMedia } from "./constants";
 
 
 export default function Home() {
+
+
+const handleShareClicked = async () => {
+  
+  const text = "https://silverway-virid.vercel.app/";
+
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  }
+};
+
+
   return (
 
     // <div className="w-full h-screen flex flex-col justify-center items-center bg-white">
@@ -205,15 +224,15 @@ export default function Home() {
               />
             </a>
 
-            <a
-              href="tel:+21629165922"
+            <span
+              onClick={handleShareClicked}
               className=" border-1 border-[#888] w-12 h-12 p-3- rounded-2xl"
             >
               <img
                 src={'/share.png'}
                 className="border-[#888] w-full h-full p-3 rounded-2xl"
               />
-            </a>
+            </span>
 
 
           </div>
