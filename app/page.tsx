@@ -32,27 +32,6 @@ const handleShareClicked = async () => {
 
   return (
 
-    // <div className="w-full h-screen flex flex-col justify-center items-center bg-white">
-
-    //   <h4 className="text-lg font-bold text-black mb-10">Social Media : </h4>
-      
-    //   <div className="w-[300px] flex flex-row flex-wrap justify-between items-center gap-5">
-    //     <a  
-    //       href=""
-    //     >
-    //       <img 
-    //         src="/facebook.avif" 
-    //         alt="" 
-    //         className="w-7 h-7"
-    //       />
-    //     </a>
-    //   </div>
-
-
-    // </div>
-
-
-
 
     <div 
       className="
@@ -67,13 +46,8 @@ const handleShareClicked = async () => {
           
         "
       >
-        {/* <div className="w-full h-[100%] relative overflow-hidden flex flex-col items-center bg-gradient-to-r from-purple-500 to-pink-500 to-transparent"> */}
           
-          <div
-            // initial={{ y: -50, opacity: 0 }}
-            // animate={{ y: 0, opacity: 1 }}
-            // transition={{ duration: 0.8, ease: "easeOut" }}          
-          >
+          <div>
             <img 
               src="/favicon.ico" 
               alt="" 
@@ -86,17 +60,11 @@ const handleShareClicked = async () => {
           
 
 
-          <h4 
-            // initial={{ x: -50, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.8, ease: "easeOut" }}              
+          <h4             
             className="text-[30px] font-extrabold mt-5"
           >Silver Way</h4>
 
           <div 
-            // initial={{ x: 50, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.8, ease: "easeOut" }}  
             className="text-gray-700 mt-2 text-center max-w-[350px] px-5"
           >
             <span>Bienvenue chez Silver Way.</span>
@@ -105,62 +73,7 @@ const handleShareClicked = async () => {
           </div>
 
 
-
-        {/* </div> */}
-
-        {/* <div className="h-fit w-fit absolute top-0 left-[75%] translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div>
-        <div className="h-fit w-fit absolute top-0 left-[75%] ml-6 translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div>
-        <div className="h-fit w-fit absolute -top-5 left-[75%] ml-3 translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div> */}
-
-        {/* <div className="h-fit w-fit absolute bottom-0 left-[20%] translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div>
-        <div className="h-fit w-fit absolute bottom-0 left-[20%] ml-6 translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div>
-        <div className="h-fit w-fit absolute -bottom-5 left-[20%] ml-3 translate-x-[-50%] bg-red-500-">
-          <Pyramid/>
-        </div> */}
-
-        {/* <div className="absolute top-0 left-0 w-full h-full">
-          <Bg1/>
-        </div> */}
-
-{/* 
-        <video
-          src={"/bg-1.webm"}
-          autoPlay
-          loop
-          className="w-full h-full absolute top-0 left-0 bg-blue-400 object-cover- scale-200"
-        /> */}
-
       </div>
-
-      {/* <motion.div className="p-5">
-
-          <motion.h4 
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}              
-            className="text-lg font-bold mt-5"
-          >Bio : </motion.h4>
-
-          <motion.p 
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}              
-            className="text-gray-800 mt-2 px-2"
-          >example example example example example example example example example example example example example example example example example example example example example example .</motion.p>
-
-      </motion.div> */}
-
-
 
 
     <div className="w-full h-fit flex flex-col justify-center- items-center bg-white-">
@@ -171,10 +84,6 @@ const handleShareClicked = async () => {
 
         {
           socialMedia.map((media) => (
-            // <div 
-            //   key={media.id}
-            //   className=""
-            // >
               <a  
                 key={media.id}
                 href={media.link}
@@ -195,7 +104,6 @@ const handleShareClicked = async () => {
                 />
                 <p className={`text-white text-lg ${media.label == "TikTok" && "ml-2"}`}>{media.label}</p>
               </a>
-            // </div>
           ))
         }
       
@@ -206,7 +114,7 @@ const handleShareClicked = async () => {
           >
             <a
               href="tel:+21690353752"
-              className=" border-1 border-[#888] w-12 h-12 p-3- rounded-2xl"
+              className=" border border-[#888] w-12 h-12 p-3- rounded-2xl"
             >
               <img
                 src={'/phone.png'}
@@ -216,7 +124,7 @@ const handleShareClicked = async () => {
 
             <a
               href="mailto:silverwayshop@gmail.com"
-              className=" border-1 border-[#888] w-12 h-12 p-3- rounded-2xl"
+              className=" border border-[#888] w-12 h-12 p-3- rounded-2xl"
             >
               <img
                 src={'/email.png'}
@@ -226,7 +134,7 @@ const handleShareClicked = async () => {
 
             <span
               onClick={handleShareClicked}
-              className=" border-1 border-[#888] w-12 h-12 p-3- rounded-2xl"
+              className=" border border-[#888] w-12 h-12 p-3- rounded-2xl cursor-pointer"
             >
               <img
                 src={'/share.png'}
@@ -240,23 +148,6 @@ const handleShareClicked = async () => {
 
     </div>
 
-
-
-      {/* <motion.div
-        className="w-full h-24 bg-red-500"
-      >
-
-      </motion.div> */}
-
-
-
-
-        {/* <div className="absolute top-0 left-30 w-full h-full flex justify-center items-center opacity-20-">
-          <Bg1/>
-        </div>
-        <div className="absolute top-20 -left-20 w-full h-full flex justify-center items-center opacity-20-">
-          <Bg1/>
-        </div> */}
 
     </div>
   );
